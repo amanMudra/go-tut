@@ -13,6 +13,9 @@ func main() {
 	app.Get("/abc", func(c *fiber.Ctx) error {
 		return c.SendString("Hello, World! 1234")
 	})
+	app.Get("/code", func(c *fiber.Ctx) error {
+		return c.SendString(Code)
+	})
 	app.Post("/sum", AddOperation)
 	app.Listen(":3000")
 
